@@ -13,6 +13,9 @@
 		4A6D60D21C7D934800BEA4DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D60D01C7D934800BEA4DB /* Main.storyboard */; };
 		4A6D60D41C7D934800BEA4DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D60D31C7D934800BEA4DB /* Assets.xcassets */; };
 		4A6D60D71C7D934800BEA4DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D60D51C7D934800BEA4DB /* LaunchScreen.storyboard */; };
+		4A6D60EF1C7DA69C00BEA4DB /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D60EA1C7DA69C00BEA4DB /* AbstractActionSheetPicker.m */; };
+		4A6D60F01C7DA69C00BEA4DB /* ActionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D60EC1C7DA69C00BEA4DB /* ActionPickerView.m */; };
+		4A6D60F11C7DA69C00BEA4DB /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D60EE1C7DA69C00BEA4DB /* SWActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		4A6D60D31C7D934800BEA4DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A6D60D61C7D934800BEA4DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A6D60D81C7D934800BEA4DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A6D60E91C7DA69C00BEA4DB /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		4A6D60EA1C7DA69C00BEA4DB /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		4A6D60EB1C7DA69C00BEA4DB /* ActionPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionPickerView.h; sourceTree = "<group>"; };
+		4A6D60EC1C7DA69C00BEA4DB /* ActionPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionPickerView.m; sourceTree = "<group>"; };
+		4A6D60ED1C7DA69C00BEA4DB /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		4A6D60EE1C7DA69C00BEA4DB /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,7 @@
 		4A6D60BB1C7D934700BEA4DB = {
 			isa = PBXGroup;
 			children = (
+				4A6D60E81C7DA69C00BEA4DB /* ActionPickerView */,
 				4A6D60C61C7D934700BEA4DB /* CustomPickerView */,
 				4A6D60C51C7D934700BEA4DB /* Products */,
 			);
@@ -79,6 +89,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4A6D60E81C7DA69C00BEA4DB /* ActionPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				4A6D60E91C7DA69C00BEA4DB /* AbstractActionSheetPicker.h */,
+				4A6D60EA1C7DA69C00BEA4DB /* AbstractActionSheetPicker.m */,
+				4A6D60EB1C7DA69C00BEA4DB /* ActionPickerView.h */,
+				4A6D60EC1C7DA69C00BEA4DB /* ActionPickerView.m */,
+				4A6D60ED1C7DA69C00BEA4DB /* SWActionSheet.h */,
+				4A6D60EE1C7DA69C00BEA4DB /* SWActionSheet.m */,
+			);
+			name = ActionPickerView;
+			path = CustomPickerView/ActionPickerView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +134,7 @@
 				TargetAttributes = {
 					4A6D60C31C7D934700BEA4DB = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZD9PB6A8X6;
 					};
 				};
 			};
@@ -149,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6D60F01C7DA69C00BEA4DB /* ActionPickerView.m in Sources */,
 				4A6D60CF1C7D934800BEA4DB /* ViewController.m in Sources */,
 				4A6D60CC1C7D934800BEA4DB /* AppDelegate.m in Sources */,
 				4A6D60C91C7D934800BEA4DB /* main.m in Sources */,
+				4A6D60EF1C7DA69C00BEA4DB /* AbstractActionSheetPicker.m in Sources */,
+				4A6D60F11C7DA69C00BEA4DB /* SWActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CustomPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mobile.com.CustomPickerView;
@@ -274,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CustomPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mobile.com.CustomPickerView;
@@ -300,6 +330,7 @@
 				4A6D60DD1C7D934800BEA4DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
