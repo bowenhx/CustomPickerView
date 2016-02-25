@@ -7,25 +7,39 @@ Does not require an agent picker view，comfy block
 
 //一级pickerView
 //displayCout 表示numberOfComponentsInPickerView 数量
-//数据传入数组，类似于【@"",@""】;
-        [ActionPickerView showPickerViewTitle:@"选择区域" displayCount:1 datas:_arrData1 forKey1:nil forKey2:nil defineSelect:2 doneBlock:^(ActionPickerView *picker, NSInteger selectedIndex, id selectedValue) {
-            NSLog(@"selectedIndex = %ld,value = %@",(long)selectedIndex,selectedValue);
-            [sender setTitle:selectedValue forState:0];
+//数据传入数组，类似于data = @[@"obj1",@"obj2"];
+        [ActionPickerView showPickerViewTitle:@"选择区域" displayCount:1 datas:data forKey1:nil forKey2:nil defineSelect:2 doneBlock:^(ActionPickerView *picker, NSInteger selectedIndex, id selectedValue) {
+        
+         NSLog(@"selectedIndex = %ld,value = %@",(long)selectedIndex,selectedValue);
+        
+         [sender setTitle:selectedValue forState:0];
+        
         } cancelBlock:^(ActionPickerView *picker) {
-            NSLog(@"cancel action");
+
+         NSLog(@"cancel action");
         } origin:self.view];
 
 //二级pickerView
 //有二级pickerView 传入数据及参数key 自动识别判断，不需要实现代理
-//data 如@【
+//data 如@[
             @{
-            @"title":@"obj",
+            @"title":@"obj1",
             @"data":@[@"obj1",@"obj2"]
+            },
+            @{
+            @"title":@"obj2",
+            @"data":@[@"obj1",@"obj2",@"obj3",@"obj4"]
             }
-            】；
-        [ActionPickerView showPickerViewTitle:@"选择区域" displayCount:2 datas:_arrData2 forKey1:@"title" forKey2:@"data" defineSelect:0 doneBlock:^(ActionPickerView *picker, NSInteger selectedIndex, id selectedValue) {
+            ]；
+//key1，key2 表示字典数据对应到pickerView 一级二级列表的key            
+            
+        [ActionPickerView showPickerViewTitle:@"选择区域" displayCount:2 datas:data forKey1:@"title" forKey2:@"data" defineSelect:0 doneBlock:^(ActionPickerView *picker, NSInteger selectedIndex, id selectedValue) {
+        
             NSLog(@"selectedIndex = %ld,value = %@",(long)selectedIndex,selectedValue);
+          
             [sender setTitle:selectedValue forState:0];
         } cancelBlock:^(ActionPickerView *picker) {
+          
             NSLog(@"cancel action");
+       
         } origin:self.view];
